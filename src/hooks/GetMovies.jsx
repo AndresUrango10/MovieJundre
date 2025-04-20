@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 
-export function useMovies(page = 1) {
+export function GetMovies(page = 1) {
     const [movies, setMovies] = useState([]);
     const [totalPages, setTotalPages] = useState(1);
     const [loading, setLoading] = useState(true);
@@ -17,12 +17,12 @@ export function useMovies(page = 1) {
                         params: {
                             api_key: "b867df3934a1aa5a300bb936454c6888",
                             language: "es-ES",
-                            page,
+                            page: page,
                         },
                     }
                 );
-                // Limit to first 10 movies
                 setMovies(response.data.results.slice(0, 10));
+                // console.log(response.data.results);
                 setTotalPages(response.data.total_pages);
             } catch (err) {
                 setError(err);
@@ -35,4 +35,3 @@ export function useMovies(page = 1) {
 
     return { movies, loading, error, totalPages };
 }
-
