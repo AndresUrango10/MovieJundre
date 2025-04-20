@@ -1,12 +1,84 @@
-# React + Vite
+#   🎬 Mi Movie App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicación web construida con React, Vite y Tailwind CSS que consume la API de The Movie Database (TMDB) para mostrar información de películas en tiempo real. Incluye paginación, modales de detalles, un sidebar interactivo y gráficos para visualizar datos.
 
-Currently, two official plugins are available:
+## 📋 Tabla de contenidos
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* 🚀 [Características](#caracteristicas)  
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+* 🛠️ [Tecnologías utilizadas](#tecnologias-utilizadas)
+
+
+* 📦 [Instalación](#instalacion)  
+  
+
+* 📖 [Uso](#uso)  
+
+
+
+##  Caracteristicas
+
+**Listado de películas|:** Muestra 10 películas por página con paginación.
+
+**Modal de detalles:** Al hacer clic en una película, se abre un modal con información extendida.
+
+**Sidebar dinámico:** Navegación lateral colapsable con enlaces a secciones (Inicio, Gráficos, Idiomas) y toggle de tema claro/oscuro.
+
+**Modo claro / oscuro**: Soporte completo a través de clases de Tailwind y un botón en el sidebar.
+
+**Gráficos interactivos:**
+
+- **Gráfico de barras**: Promedio de votación de las películas.
+
+- **Gráfico de pastel:** Distribución de películas por idioma original.
+
+##  Tecnologias utilizadas
+
+React y Vite
+
+Tailwind CSS (darkMode: 'class', plugin @tailwindcss/line-clamp)
+
+React Router DOM para navegación
+
+Recharts para gráficos interactivos
+
+Axios para peticiones HTTP a TMDB API
+
+##  Instalacion
+
+- Clona el repositorio:
+
+```bash
+git https://github.com/AndresUrango10/MovieJundre.git
+cd dashboard-juandre
+```
+Instala dependencias:
+
+```bash
+npm install
+```
+
+Configura tu API Key, en el componente GetMovies.jsx:
+
+```bash
+tu_api_key
+```
+
+Inicia la aplicación:
+
+```bash
+npm run dev
+```
+Abre en tu navegador:http://localhost:5173
+
+## Uso
+
+Navega entre Inicio, Gráficos e Idiomas usando el sidebar.
+
+Utiliza los botones de paginación para cambiar de página.
+
+Haz clic en una película para ver más detalles en el modal.
+
+Cambia entre tema claro/oscuro con el botón del sidebar.
+
