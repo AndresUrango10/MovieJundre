@@ -11,7 +11,7 @@ export default function Sidebar({ theme, toggleTheme }) {
     const [collapsed, setCollapsed] = useState(false);
 
     return (
-        <aside className={`transition-all duration-300 ${collapsed ? 'w-16' : 'w-64'} h-screen bg-white dark:bg-gray-900 shadow-lg flex flex-col`}>
+        <aside className={`transition-all duration-300 ${collapsed ? 'w-16' : 'w-64'} min-h-screen bg-white dark:bg-gray-900 shadow-lg flex flex-col`}>
             <div className="flex items-center justify-between px-4 py-3 border-b border-gray-200 dark:border-gray-700">
                 {!collapsed && <h1 className="text-lg font-bold text-gray-800 dark:text-white">🎥 Películas</h1>}
                 <button onClick={() => setCollapsed(!collapsed)} className="text-gray-500 dark:text-gray-300">

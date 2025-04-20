@@ -8,7 +8,7 @@ export default function Modal({ isOpen, onClose, children }) {
 
     useEffect(() => {
         if (isOpen) {
-            setTimeout(() => setShow(true), 10); // Pequeño delay para aplicar clases de animación
+            setTimeout(() => setShow(true), 10);
             document.body.style.overflow = 'hidden';
         } else {
             setShow(false);
